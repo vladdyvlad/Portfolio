@@ -31,9 +31,9 @@ Each scenario includes a detailed narrative, step-by-step hunting queries, scree
 
 ## 👤 Author
 
-**Erick Cisneros Ruballos**  
-🔗 [LinkedIn](https://www.linkedin.com/in/erickcr1/)  
-💻 [GitHub](https://github.com/erickcisneros1)
+**Vladimir**  
+🔗 [LinkedIn](https://www.linkedin.com/in/valexis/)  
+💻 [GitHub](https://github.com/vladdyvlad)
 
 ---
 
