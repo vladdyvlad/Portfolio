@@ -1,0 +1,56 @@
+<#
+.SYNOPSIS
+     This script enables PowerShell Script Block Logging by modifying the Windows registry to ensure that PowerShell blocks are logged for auditing and monitoring purposes.
+
+.NOTES
+    Author          : Vladimir
+    LinkedIn        : https://www.linkedin.com/in/valexis/
+    GitHub          : https://github.com/vladdyvlad
+    Date Created    : 2025-04-23
+    Last Modified   : 2025-05-23
+    Version         : 1.0
+    CVEs            : N/A
+    Plugin IDs      : N/A
+    STIG-ID         : WN10-CC-000326
+
+.TESTED ON
+    Date(s) Tested  : 
+    Tested By       : 
+    Systems Tested  : 
+    PowerShell Ver. : 
+
+.USAGE
+    Put any usage instructions here.
+    Example syntax:
+    PS C:\> .\STIG-ID-WN10-CC-000326.ps1 
+#>
+
+# Ensure the script is run as Administrator
+if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) {
+    Write-Error "This script must be run as Administrator."
+    exit 1
+}
+
+# Define registry path and values
+$regPath = "HKLM:\Software\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging"
+$regName = "EnableScriptBlockLogging"
+$regValue = 1  # 1 = Enabled
+
+# Create the registry key if it doesn't exist
+if (-not (Test-Path $regPath)) {
+    try {
+        New-Item -Path $regPath -Force | Out-Null
+        Write-Host "Created registry path: $regPath"
+    } catch {
+        Write-Error "Failed to create registry path: $_"
+        exit 1
+    }
+}
+
+# Set the policy value
+try {
+    Set-ItemProperty -Path $regPath -Name $regName -Value $regValue -Type DWord
+    Write-Host "'Turn on PowerShell Script Block Logging' policy set to 'Enabled'."
+} catch {
+    Write-Error "Failed to set registry value: $_"
+}
