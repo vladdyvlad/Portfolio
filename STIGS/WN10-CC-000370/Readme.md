@@ -41,7 +41,7 @@ This script disables the use of a PIN for logging into a domain, enforcing more 
     This script disables the use of a PIN for logging into a domain, enforcing more secure login methods through registry modifications.
 
 .NOTES
-    Author          : Erick Cisneros Ruballos
+    Author          : Vladimir
     LinkedIn        : https://www.linkedin.com/in/valexis/
     GitHub          : https://github.com/vladdyvlad
     Date Created    : 2025-05-23
@@ -63,7 +63,7 @@ This script disables the use of a PIN for logging into a domain, enforcing more 
     PS C:\> .\STIG-ID-WN10-CC-000370.ps1 
 #>
 
- # Define the registry path and values
+# Define the registry path and values
 $regPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\System"
 $regName = "AllowDomainPINLogon"
 $regValue = 0
@@ -77,4 +77,3 @@ if (-not (Test-Path $regPath)) {
 New-ItemProperty -Path $regPath -Name $regName -Value $regValue -PropertyType DWord -Force | Out-Null
 
 Write-Host "'Turn on convenience PIN sign-in' policy set to 'Disabled' successfully."
- 
