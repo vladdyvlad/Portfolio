@@ -4,7 +4,7 @@
 
 .NOTES
     Author          : Vladimir 
-    LinkedIn        : https://www.linkedin.com/in/vlaexis/
+    LinkedIn        : https://www.linkedin.com/in/valexis/
     GitHub          : https://github.com/Vladdyvlad
     Date Created    : 2025-05-23
     Last Modified   : 2025-05-23
