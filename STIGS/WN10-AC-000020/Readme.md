@@ -1,3 +1,40 @@
+# Enforce Password History Policy - PowerShell Script
+
+This PowerShell script ensures that the **"Enforce password history"** setting is configured to **24** previous passwords. This helps meet compliance requirements such as [STIG-ID: WN10-AC-000020](https://www.tenable.com/audits/items/DISA_STIG_Windows_10_v2r9.audit:382a91c2e06200befc2e6cb33f3a2d76).
+
+---
+
+## 🔒 Compliance Info
+
+- **STIG ID**: WN10-AC-000020
+- **Description**: Enforce password history must be configured to at least 24 passwords.
+- **Fix**: This script sets the correct value automatically using the built-in `secedit` utility.
+- **Impact**: Medium
+
+
+## 📸 Before & After
+
+**Before**
+
+![Image](https://github.com/user-attachments/assets/b0749f41-f3ee-452b-bc15-db9b8b606f9a)
+
+**After**
+
+![Image](https://github.com/user-attachments/assets/4a83bb08-c2fe-4e0a-a653-1d30b9ec7ffc)
+
+> Replace these placeholders with actual screenshots showing the policy before and after script execution.
+
+---
+
+## 🧠 Synopsis
+
+This script configures the local security policy to retain the last 24 passwords using `secedit` and a temporary configuration export.
+
+---
+
+## 📜 Script
+
+```powershell
  <#
 .SYNOPSIS
    This script configures the local security policy to retain the last 24 passwords using `secedit` and a temporary configuration export.
