@@ -4,8 +4,8 @@
 
 .NOTES
     Author          : Vladimir
-    LinkedIn        : https://www.linkedin.com/in/erickcr1/
-    GitHub          : https://github.com/erickcisneros1
+    LinkedIn        : https://www.linkedin.com/in/valexis/
+    GitHub          : https://github.com/vladdyvlad
     Date Created    : 2025-05-23
     Last Modified   : 2025-05-23
     Version         : 1.0
