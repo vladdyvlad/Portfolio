@@ -41,11 +41,11 @@ This script sets the inactivity timeout for interactive logons to 900 seconds (1
    This script sets the inactivity timeout for interactive logons to 900 seconds (15 minutes) by modifying the Windows registry under both `Lsa` and `Winlogon` paths.
 
 .NOTES
-    Author          : Erick Cisneros Ruballos
+    Author          : Vladimir
     LinkedIn        : https://www.linkedin.com/in/valexis/
     GitHub          : https://github.com/vladdyvlad
-    Date Created    : 2025-04-27
-    Last Modified   : 2025-04-27
+    Date Created    : 2025-05-24
+    Last Modified   : 2025-05-24
     Version         : 1.0
     CVEs            : N/A
     Plugin IDs      : N/A
